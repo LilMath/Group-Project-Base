@@ -14,7 +14,7 @@ fetch('https://calorieninjas.p.rapidapi.com/v1/nutrition?query=tomato', options)
     console.log(data.items[0].name);
     console.log(data.items[0].calories);
 
-    const cals = `<p>${data.items[0].calories}`;
+    const cals = `<p>${data.items[0].calories}</p>`;
 
     document.getElementById('test').innerHTML = cals;
   })
