@@ -22,16 +22,19 @@ function apiGet() {
       const {calories} = data.items[0];
       const {sugar_g} = data.items[0];
       const {protein_g} = data.items[0];
+      const {fiber_g} = data.items[0];
+      const {fat_total_g} = data.items[0];
+      const {sodium_mg} = data.items[0];
 
       const ctx = document.getElementById('myChart');
 
       const myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-          labels: ['Calories', 'Sugar', 'Protein', 'Green', 'Purple', 'Orange'],
+          labels: ['Calories', 'Sugar', 'Protein', 'Fiber', 'Fat', 'Sodium'],
           datasets: [{
             label: '# of Votes',
-            data: [calories, sugar_g, protein_g, 5, 2, 3],
+            data: [calories, sugar_g, protein_g, fiber_g, fat_total_g, sodium_mg],
             borderWidth: 1
           }]
         },
